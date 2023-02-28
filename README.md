@@ -1,2 +1,2 @@
 # ytm
-Generic Youtube to mp3
+Generic Command line youtube to mp3 converter/with colorama
