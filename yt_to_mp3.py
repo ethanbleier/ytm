@@ -2,17 +2,24 @@ from pytube import YouTube
 import os
 from colorama import Back
 
-yt = YouTube(
-    str(input("Enter url \n>>")))
+
+# Stole some of this guys code: https://stackoverflow.com/questions/68680322/pytube-urllib-error-httperror-http-error-410-gone
+yt = YouTube(input("link to download >>"))
+
+#Show details
+print("title: ", yt.title)
+print("views: ", yt.views)
+print("length: ", yt.length)
 
 video = yt.streams.filter(only_audio=True).first()
 
-print("enter destination, leave blank for current directory")
-destination = str(input(">> ")) or '.'
+# For my pc only. Change to desired folder
+# destination = r'C:\Users\Ethan Bleier\Desktop\abyss (999)'
+destination = '.'
 
 out_file = video.download(output_path = destination)
 
-base, ext = os.path.splitext(out_file)
+base = os.path.splitext(out_file)
 new_file = base + '.mp3'
 os.rename(out_file, new_file)
 
