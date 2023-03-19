@@ -13,8 +13,6 @@ print("length: ", yt.length)
 
 video = yt.streams.filter(only_audio=True).first()
 
-# For my pc only. Change to desired folder
-# destination = r'C:\Users\Ethan Bleier\Desktop\abyss (999)'
 destination = '.'
 
 out_file = video.download(output_path = destination)
