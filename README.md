@@ -1,3 +1,4 @@
+# Pytube is cancelled. Trying this project again with better library! Less bugs! Fuck you, google!
 # Youtube-To-Mp3
 # Y-T-M
 Generic Command line youtube to mp3 converter/with colorama
